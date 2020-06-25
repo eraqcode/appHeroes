@@ -1,0 +1,22 @@
+<main class="main min-h-mfull">
+    <header>
+        <h2 class="text-5xl tracking-wider font-bangers mx-8 mt-4">Buscando: {{ termino }}</h2>
+    </header>
+    <div class="info text-3xl font-semibold italic bg-red-300 w-6/12 mx-auto mt-3 text-center p-5" *ngIf="heroes.length == 0">
+        No Existen Resultados con el termino <span class="font-extrabold"> {{termino}} </span> 
+    </div>
+    <div class="main__content w-11/12 mx-auto my-0 py-2 items-center flex flex-col lg:flex-row lg:flex-wrap justify-between">
+       
+        <app-tarjetas-heroes
+            [heroe] = "heroe"
+            [index] = "heroe.id"
+        
+            *ngFor="let heroe of heroes;"
+        >
+
+        </app-tarjetas-heroes>
+        
+    </div>
+
+    
+</main>

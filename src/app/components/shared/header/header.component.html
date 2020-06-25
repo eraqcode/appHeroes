@@ -1,0 +1,39 @@
+<header class=" header bg-red-1000 w-full flex flex-row flex-wrap justify-around items-center">
+    <button (click) = "mostrarNavBar = !mostrarNavBar"
+     class="btn__toggle text-white order-1 text-left ml-4 lg:hidden">
+        <i class="fas fa-bars text-2xl"></i>
+    </button>
+
+    <a href="#" class="logo order-2 mx-auto my-0 lg:order-1 lg:mx-4">
+        <img class="w-10 h-10" src="../../../../assets/img/A-64.png" alt="">
+    </a>
+
+    <nav *ngIf="mostrarNavBar" class="navbar__content order-5 w-full text-white h-64 lg:order-2 lg:w-1/5 lg:h-auto">
+        <ul class="navbar h-full flex flex-col items-center justify-around text-xl lg:flex-row">
+            <li class="navbar__item lg:hover:bg-red-800 w-20 h-full " routerLinkActive="active">
+                <a class="navbar__link block text-center" [routerLink]="['home']">Home</a>
+            </li>
+            <li class="navbar__item lg:hover:bg-red-800 w-20 h-full" routerLinkActive="active">
+                <a class="navbar__link block text-center" [routerLink]="['about']">About</a>
+            </li>
+            <li class="navbar__item lg:hover:bg-red-800 w-20 h-full" routerLinkActive="active">
+                <a class="navbar__link block text-center" [routerLink]="['heroes']">Heroes</a>
+            </li> 
+        </ul>
+    </nav>
+
+    <div (click) = "mostrarInput = !mostrarInput"  class="search__logo order-3 mr-4 lg:hidden">
+        <i class="fas fa-search text-white cursor-pointer text-lg"></i>
+    </div>
+    <div *ngIf="mostrarInput" class="search__input order-4 w-full h-24 lg:order-3 lg:w-3/12 lg:h-auto">
+        <div class="w-full flex justify-between " >
+            <input type="search" name="search" id="search" placeholder="Buscar Hereo" class="
+            rounded-lg block h-8 placeholder-red-900 text-xl w-3/5 ml-5" (keyup.enter) = "buscarHeroe(termino.value)" #termino>
+            <button (click) = "buscarHeroe(termino.value)" type="button" class="bg-white text-red-900 w-4/12 mr-5 text-lg font-semibold">Buscar</button>
+        </div>
+    </div>
+</header>
+
+
+
+

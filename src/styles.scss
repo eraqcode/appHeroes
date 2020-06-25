@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+.font-bangers {
+    font-family: 'Bangers', cursive;
+}
+
+.min-h-mfull {
+    min-height: 80vh;
+}
+
+.bg-red-1000 {
+    background-color: rgb(48, 0, 0);
+}
+
+.rounded-xl {
+    border-radius: 15px;
+}
+
+.w-74 {
+    width: 240px;
+}
+
+.h-74 {
+    height: 240px;
+}

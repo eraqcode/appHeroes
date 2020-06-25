@@ -1,0 +1,11 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg border-2 border-red-900 border-opacity-25 mt-8">
+    <img class="w-56 h-48 block mx-auto my-2" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2"> {{ heroe.nombre }} </div>
+      <p class="text-gray-700 text-base"> {{ heroe.bio }}  </p>
+      <p class="text-gray-700 text-base"> {{ heroe.aparicion }}  </p>
+    </div>
+    <button (click) = 'verHeroe()' class="block mx-auto my-2 h-12 w-9/12 bg-red-1000 text-yellow-100 rounded-xl border-red-900 border-4 text-xl font-semibold font-serif hover:bg-white hover:text-red-900">Ver Mas...</button>
+    
+    <!--<a [routerLink]="['/heroe',i]" class="block mx-auto my-2 h-12 w-9/12 bg-red-1000 text-yellow-100 rounded-xl border-red-900 border-4 text-xl font-semibold font-serif hover:bg-white hover:text-red-900"> Ver Mas... </a>-->
+</div>

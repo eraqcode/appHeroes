@@ -1,0 +1,39 @@
+<main class="main min-h-mfull">
+    <section class="heroe">
+        <header>
+            <h3 class="nombre__heroe text-2xl mx-8 my-8 font-bangers lg:text-5xl "> Info Heroes </h3>
+        </header>
+        <div class="heroe__content grid gap-20 w-4/5 mx-auto my-0 justify-center lg:grid-cols-2">
+            
+            <div class="heroe col-start-1">
+                <div class="heroe__img w-74 h-74 border-2 border-red-900 border-opacity-25 rounded-xl mx-auto my-8">
+                    <img [src]="heroe.img" alt="" class="">
+                </div> 
+                <a [routerLink]="['/heroes']" class="block mx-auto my-1 h-10 w-6/12 bg-red-1000 text-yellow-100 rounded-xl border-red-900 border-4 text-xl font-semibold font-serif hover:bg-white hover:text-red-900 text-center">Regresr a Heroes</a>
+            </div>
+
+            <div class="heroe__info w-9/12 mx-auto my-4">
+                <h4 class="text-3xl font-semibold">
+                     {{ heroe.nombre | uppercase }}
+                </h4>
+                <br>
+                <p class="aparicion">
+                     <span class="font-bold">Fecha Aparicion:</span>
+                      {{ heroe.aparicion | date: 'y' }}
+                </p>
+                <br>
+                <p class="bio w-3/5 text-justify"> <span class="font-bold ">
+                     Biografia: </span> {{heroe.bio}}
+                </p>
+                <br>
+                <div class="img_logo w-20 h-20">
+                    <img *ngIf="heroe.casa === 'DC'" src="../../../assets/img/dc.png" alt="" class="casa">
+                    <img *ngIf=" heroe.casa === 'Marvel' " src="../../../assets/img/marvel.png" alt="" class="casa__logo">
+                </div>
+                
+            </div>
+            
+        </div>
+       
+    </section>
+</main>
